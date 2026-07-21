@@ -575,8 +575,6 @@ html,body{height:100%;background:#000;overflow:hidden;font-family:var(--sans);co
 
 </div></div>
 
-<div id="prev" class="arrow">&#8249;</div>
-<div id="next" class="arrow">&#8250;</div>
 <div id="count">01</div>
 <div id="chap"></div>
 <div id="hint">Arrow keys or click to advance</div>
@@ -632,8 +630,6 @@ html,body{height:100%;background:#000;overflow:hidden;font-family:var(--sans);co
    if(fstep>0){ fstep--; frags[fstep].classList.remove('on'); }
    else if(cur>0){ show(cur-1); var sl=slides[cur]; frags.forEach(function(f){f.classList.add('on')}); fstep=frags.length; }
  }
- document.getElementById('next').onclick=next;
- document.getElementById('prev').onclick=prev;
  document.addEventListener('keydown',function(e){
    if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();next();}
    else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();prev();}
